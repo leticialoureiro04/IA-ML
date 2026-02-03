@@ -22,63 +22,84 @@ The main objective is to analyze operational indicators and predict **citizen sa
 
 ## Requirements
 
-- Python 3.9 or higher (recommended)
-- Python libraries:
-  - `pandas`
-  - `numpy`
-  - `matplotlib`
-  - `seaborn`
-  - `scikit-learn`
+To run this project, the following software and libraries are required:
 
-### Install dependencies
+- **Python** 3.9 or higher (recommended)
+- **pandas**
+- **numpy**
+- **matplotlib**
+- **seaborn**
+- **scikit-learn**
+- **ydata-profiling** (for the EDA HTML report)
 
-Run the following command in the project directory:
+### Optional
+- A web browser (e.g., Chrome, Firefox) to view the generated HTML report (`report.html`)
+
+### Installation
+
+Install the required dependencies by running the following command in the project directory:
 
 ```bash
 pip install pandas numpy matplotlib seaborn scikit-learn
 
-How to Run the Project
-1) Data Preprocessing
+## How to Run the Project
 
-Generates the preprocessed dataset:
+### 1) Data Preprocessing
 
+Generates the preprocessed dataset used in all subsequent analyses.
+
+```bash
 python preprocessamento.py
 
-Output:
+**Output:**
+- `dataset_governanca_admin_publica_preprocessado.csv`
 
-dataset_governanca_admin_publica_preprocessado.csv
+### 2) Exploratory Data Analysis
 
-2) Exploratory Data Analysis
+Displays distributions, boxplots, and correlation heatmaps.
 
-Displays distributions, boxplots, and correlation heatmaps:
-
+```bash
 python analise_exploratoria.py
 
-In environments without graphical interface, plots can be saved using plt.savefig().
+**Notes:**
+- In environments without a graphical interface, plots can be saved using `plt.savefig()`.
 
-3) Linear Regression (Citizen Satisfaction)
+### 3) Linear Regression (Citizen Satisfaction)
+
+Trains a Linear Regression model to predict citizen satisfaction.
+
+```bash
 python regressao_satisfacao.py
 
-Output:
+**Output:**
+- Evaluation metrics printed in the terminal (MSE, MAE, R²)
+- `resultados_regressao_satisfacao.csv`
 
-Evaluation metrics in the terminal (MSE, MAE, R²)
+### 4) Random Forest Regression
 
-resultados_regressao_satisfacao.csv
+Trains a Random Forest Regressor for predicting citizen satisfaction.
 
-4) Random Forest Regression
+```bash
 python regressao_randomforest.py
 
-Output:
+**Output:**
+- Evaluation metrics printed in the terminal (MSE, MAE, R²)
+- `resultados_regressao_randomforest.csv`
 
-Evaluation metrics in the terminal (MSE, MAE, R²)
+### 5) Decision Tree Regression
 
-resultados_regressao_randomforest.csv
+Trains a Decision Tree Regressor and exports the tree visualization.
 
-5) Decision Tree Regression
+```bash
 python arvore_decisao_satisfacao.py
 
-Output:
+**Output:**
+- Evaluation metrics printed in the terminal (MSE, MAE, R²)
+- `resultados_arvore_decisao.csv` — real vs. predicted values
 
-Evaluation metrics in the terminal (MSE, MAE, R²)
+## Exploratory Data Analysis Report (EDA)
 
-resultados_arvore_decisao.csv — real vs predicted values
+An interactive exploratory data analysis report generated with **ydata-profiling**
+is available online:
+
+👉 https://leticialoureiro04.github.io/IA-ML/report.html
