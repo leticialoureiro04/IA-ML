@@ -20,7 +20,7 @@ The main objective is to analyze operational indicators and predict **citizen sa
 
 ---
 
-## Requirements
+### Requirements
 
 To run this project, the following software and libraries are required:
 
@@ -35,16 +35,20 @@ To run this project, the following software and libraries are required:
 ### Optional
 - A web browser (e.g., Chrome, Firefox) to view the generated HTML report (`report.html`)
 
-### Installation
+---
+
+#### Installation
 
 Install the required dependencies by running the following command in the project directory:
 
 ```bash
 pip install pandas numpy matplotlib seaborn scikit-learn
 
-## How to Run the Project
+---
 
-### 1) Data Preprocessing
+##### How to Run the Project
+
+##### 1) Data Preprocessing
 
 Generates the preprocessed dataset used in all subsequent analyses.
 
@@ -54,7 +58,7 @@ python preprocessamento.py
 **Output:**
 - `dataset_governanca_admin_publica_preprocessado.csv`
 
-### 2) Exploratory Data Analysis
+##### 2) Exploratory Data Analysis
 
 Displays distributions, boxplots, and correlation heatmaps.
 
@@ -64,7 +68,7 @@ python analise_exploratoria.py
 **Notes:**
 - In environments without a graphical interface, plots can be saved using `plt.savefig()`.
 
-### 3) Linear Regression (Citizen Satisfaction)
+##### 3) Linear Regression (Citizen Satisfaction)
 
 Trains a Linear Regression model to predict citizen satisfaction.
 
@@ -75,7 +79,7 @@ python regressao_satisfacao.py
 - Evaluation metrics printed in the terminal (MSE, MAE, R²)
 - `resultados_regressao_satisfacao.csv`
 
-### 4) Random Forest Regression
+##### 4) Random Forest Regression
 
 Trains a Random Forest Regressor for predicting citizen satisfaction.
 
@@ -86,7 +90,7 @@ python regressao_randomforest.py
 - Evaluation metrics printed in the terminal (MSE, MAE, R²)
 - `resultados_regressao_randomforest.csv`
 
-### 5) Decision Tree Regression
+##### 5) Decision Tree Regression
 
 Trains a Decision Tree Regressor and exports the tree visualization.
 
@@ -96,6 +100,8 @@ python arvore_decisao_satisfacao.py
 **Output:**
 - Evaluation metrics printed in the terminal (MSE, MAE, R²)
 - `resultados_arvore_decisao.csv` — real vs. predicted values
+
+---
 
 ## Exploratory Data Analysis Report (EDA)
 
